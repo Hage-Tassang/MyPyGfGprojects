@@ -257,9 +257,9 @@ def run_cli(hotels):
 
         elif choice == '2':
             opt = input('Sort by (name/rating/rooms): ').strip().lower()
-            if opt == 'name':
+            if opt == 'name'.lower():
                 Hotel.sortByName()
-            elif opt == 'rating':
+            elif opt == 'rating'.lower():
                 Hotel.sortByRate()
             elif opt in ('rooms', 'room', 'available'):
                 Hotel.sortByRoomAvailable()
@@ -330,7 +330,7 @@ if __name__ == '__main__':
     hotelName = ["H1", "H2", "H3"]
     rooms = [4, 5, 6]
     locations = ["Bangalore", "Bangalore", "Mumbai"]
-    ratings = [5, 5, 3]
+    ratings = [5, 1, 3]
     prices = [100, 200, 100]
 
     hotels = create_hotels(hotelName, rooms, locations, ratings, prices)
